@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import tqdm as tqdm
 
-
 def Winner(array):
     #Randomly selects a winner and 'pops' them from the list
     index = rd.randrange(0,len(array))
@@ -24,8 +23,7 @@ members = members[:,0]
 
 #Creating Distribution
 dist = np.zeros(len(members))
-#n=99999999 #Number of sample points
-n = 9999
+n=99999999 #Number of sample points
 with tqdm(total = n) as pbar:
     for i in range(n):
         rand = rd.randrange(0,len(dist))
@@ -58,7 +56,6 @@ skull_winner, members = Winner(members)
 #Painted VW Beetle Winner
 pvwb_winner, members = Winner(members)
 
-
 #Create Graphic of Winners
 fig=plt.figure('winners')
 ax=fig.add_subplot(111)
@@ -72,4 +69,3 @@ plt.axis('off')
 ax.text(5,7,amulet_text,horizontalalignment='center',verticalalignment='center',style = 'italic',fontweight = 'bold',size = '18')
 ax.text(5,5,skull_text,horizontalalignment='center',verticalalignment='center',style = 'italic',fontweight = 'bold',size = '18')
 ax.text(5,3,pvwb_text,horizontalalignment='center',verticalalignment='center',style = 'italic',fontweight = 'bold',size = '18')
-
