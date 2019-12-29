@@ -23,7 +23,7 @@ members = members[:,0]
 
 #Creating Distribution
 dist = np.zeros(len(members))
-n=99999999 #Number of sample points
+n=9999 #Number of sample points
 with tqdm(total = n) as pbar:
     for i in range(n):
         rand = rd.randrange(0,len(dist))
